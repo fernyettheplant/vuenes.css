@@ -1,0 +1,57 @@
+{
+  "name": "vuenes.css",
+  "description": "Vue Library that implement NES.css library into components",
+  "version": "1.0.0",
+  "main": "./vuenes.css.js",
+  "author": "Fernando Alvarez",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com:jefer590/vuenes.css.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jefer590/vuenes.css/issues"
+  },
+  "homepage": "https://github.com/jefer590/vuenes.css#readme",
+  "scripts": {
+    "lint": "vue-cli-service lint"
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "nes.css",
+    "vue-components"
+  ],
+  "files": [
+    "src/*",
+    "*.json",
+    "*.js"
+  ],
+  "dependencies": {
+    "nes.css": "^0.0.2",
+    "vue": "^2.5.17"
+  },
+  "devDependencies": {
+    "husky": "^1.2.0",
+    "@vue/cli-plugin-babel": "^3.2.0",
+    "@vue/cli-plugin-eslint": "^3.2.1",
+    "@vue/cli-service": "^3.2.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0-0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": [
+        "npm run lint"
+      ],
+      "pre-push": [
+        "npm run lint"
+      ]
+    }
+  }
+}
