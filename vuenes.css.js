@@ -7,6 +7,10 @@ import NesOctocat from './src/components/NesOctocat.vue'
 import NesIcon from './src/components/NesIcon.vue'
 import NesRadioButton from './src/components/NesRadioButton.vue'
 
+// Import CSS
+import 'nes.css/css/nes.css'
+
+// Export Components
 const Components = {
   NesButton,
   NesCheckbox,
@@ -26,4 +30,4 @@ const VueNesCssPlugin = {
   }
 }
 
-module.exports = VueNesCssPlugin
+export default VueNesCssPlugin
