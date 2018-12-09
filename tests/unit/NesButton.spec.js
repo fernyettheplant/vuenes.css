@@ -2,9 +2,12 @@ import { mount } from '@vue/test-utils'
 import NesButton from '../../src/components/NesButton.vue'
 
 describe('NesButton.vue', () => {
-  const createButtonWrapper = (propsData = {}, slots = {}) => {
+  const createButtonWrapper = (propsData = {}, slot) => {
     return mount(NesButton, {
-      propsData
+      propsData,
+      slots: {
+        default: slot || 'I am a button'
+      }
     })
   }
 
@@ -13,6 +16,7 @@ describe('NesButton.vue', () => {
 
     expect(wrapper.exists()).toBe(true)
     expect(wrapper.find('button').exists()).toBe(true)
+    expect(wrapper.text()).toBe('I am a button')
   })
 
   it('should render button with proper button tag', () => {
@@ -26,10 +30,10 @@ describe('NesButton.vue', () => {
   it('should emit click event', () => {
     const wrapper = createButtonWrapper()
 
-    // Emit Click three times
-    wrapper.vm.$emit('click')
-    wrapper.vm.$emit('click')
-    wrapper.vm.$emit('click')
+    // Trigger Click and Emit Three Times
+    wrapper.find('button.btn').trigger('click')
+    wrapper.find('button.btn').trigger('click')
+    wrapper.find('button.btn').trigger('click')
 
     expect(wrapper.emitted('click')).toBeTruthy()
     expect(wrapper.emitted('click').length).toBe(3)
@@ -73,5 +77,14 @@ describe('NesButton.vue', () => {
 
     expect(buttonClasses.length).toBe(2)
     expect(buttonClasses).toContainEqual('is-error')
+  })
+
+  it('should print html inside slot', function () {
+    const wrapper = createButtonWrapper({}, '<p>Hello there!</p>')
+    const slot = wrapper.find('button>p')
+
+    expect(wrapper.exists()).toBe(true)
+    expect(slot.exists()).toBe(true)
+    expect(slot.html()).toBe('<p>Hello there!</p>')
   })
 })
