@@ -79,12 +79,20 @@ describe('NesButton.vue', () => {
     expect(buttonClasses).toContainEqual('is-error')
   })
 
-  it('should print html inside slot', function () {
+  it('should print html inside slot', () => {
     const wrapper = createButtonWrapper({}, '<p>Hello there!</p>')
     const slot = wrapper.find('button>p')
 
     expect(wrapper.exists()).toBe(true)
     expect(slot.exists()).toBe(true)
     expect(slot.html()).toBe('<p>Hello there!</p>')
+  })
+
+  it('should match snapshot', () => {
+    const wrapper = createButtonWrapper({
+      success: true
+    }, '<h3>I am a snapshot!</h3>')
+
+    expect(wrapper.html()).toMatchSnapshot()
   })
 })
