@@ -1,5 +1,11 @@
 # VueNES.css
 
+[![buddy pipeline](https://app.buddy.works/fernalvarez/vuenes-css/pipelines/pipeline/163725/badge.svg?token=d1e810606d21ee50ab07b91076e24552754952406a381d13de8ae5deedd6de3f "buddy pipeline")](https://app.buddy.works/fernalvarez/vuenes-css/pipelines/pipeline/163725)
+[![buddy pipeline](https://app.buddy.works/fernalvarez/vuenes-css/pipelines/pipeline/163726/badge.svg?token=d1e810606d21ee50ab07b91076e24552754952406a381d13de8ae5deedd6de3f "buddy pipeline")](https://app.buddy.works/fernalvarez/vuenes-css/pipelines/pipeline/163726)
+[![codecov](https://codecov.io/gh/jefer590/vuenes.css/branch/master/graph/badge.svg)](https://codecov.io/gh/jefer590/vuenes.css)
+![](https://img.shields.io/npm/dt/vuenes.css.svg)
+![](https://img.shields.io/david/jefer590/vuenes.css.svg)
+
 ## Introduction
 
 VueNES.css is a basic component library based on the CSS Framework [NES.css](https://github.com/BcRikko/NES.css)
@@ -9,13 +15,13 @@ VueNES.css is a basic component library based on the CSS Framework [NES.css](htt
 ### Using NPM
 
 ```bash
-$npm install vueness.css
+$npm install vuenes.css
 ```
 
 ### Using yarn
 
 ```bash
-$yarn add vueness.css
+$yarn add vuenes.css
 ```
 
 ## Quick Start

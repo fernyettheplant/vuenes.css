@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NesContainer.vue should match snapshot 1`] = `
+<article class="container with-title is-center is-dark">
+  <h3 class="title">
+    This is my title
+  </h3> <button type="button" class="btn"></button>
+</article>
+`;

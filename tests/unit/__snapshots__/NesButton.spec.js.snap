@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NesButton.vue should match snapshot 1`] = `
+<button type="button" class="btn is-success">
+  <h3>I am a snapshot!</h3>
+</button>
+`;
