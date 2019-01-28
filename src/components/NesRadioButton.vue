@@ -1,9 +1,10 @@
 <template>
   <label>
     <input
-      class="radio"
+      class="nes-radio"
       type="radio"
       :name="groupName"
+      :checked="checked"
     >
     <span>
       <slot />
@@ -17,7 +18,18 @@ export default {
     groupName: {
       type: String,
       required: true
+    },
+    checked: {
+      type: Boolean,
+      required: false
     }
   }
 }
 </script>
+
+<style lang="scss">
+@import "~typeface-press-start-2p/index.css";
+@import "~nes.css/scss/base/index";
+@import "~nes.css/scss/utilities/index";
+@import "~nes.css/scss/elements/radios";
+</style>

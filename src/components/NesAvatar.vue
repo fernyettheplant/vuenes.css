@@ -1,32 +1,35 @@
 <template>
-  <li
-    :class="iconClasses"
-    class="nes-icon"
-  />
+  <img
+    :src="src"
+    :alt="alt"
+    class="nes-avatar"
+    :class="nesAvatarClasses"
+  >
 </template>
 
 <script>
 export default {
   props: {
-    name: {
+    src: {
       type: String,
-      required: true
+      default: () => ''
+    },
+    alt: {
+      type: String,
+      default: () => ''
     },
     small: Boolean,
     medium: Boolean,
     large: Boolean,
-    empty: Boolean,
-    half: Boolean
+    rounded: Boolean
   },
   computed: {
-    iconClasses () {
+    nesAvatarClasses () {
       return {
-        [this.name]: true,
         'is-small': this.small,
         'is-medium': this.medium,
         'is-large': this.large,
-        'is-empty': this.empty,
-        'is-half': this.half
+        'is-rounded': this.rounded
       }
     }
   }
@@ -34,8 +37,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "~typeface-press-start-2p/index.css";
 @import "~nes.css/scss/base/index";
-@import "~nes.css/scss/utilities/index";
-@import "~nes.css/scss/icons/index";
+@import "~nes.css/scss/elements/avatar";
 </style>

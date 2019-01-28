@@ -1,51 +1,53 @@
 <template>
-  <Component
-    :is="tag"
+  <section
     :class="containerClasses"
-    class="container"
+    class="nes-container"
   >
-    <Component
-      :is="titleTag"
-      v-if="containsTitleProps"
+    <h2
+      v-if="title"
       class="title"
     >
       {{ title }}
-    </Component>
+    </h2>
+    <!-- Slot used for the Container Content -->
     <slot />
-  </Component>
+  </section>
 </template>
 
 <script>
+/**
+ * Vue Component implementation of the Nes Container
+ * @author Jesus Fernando Alvarez Franco
+ * @license MIT
+ */
 export default {
+
   props: {
-    tag: {
-      type: String,
-      default: () => 'div'
-    },
     title: {
       type: String,
       default: () => ''
     },
-    titleTag: {
-      type: String,
-      default: () => 'h2'
-    },
     center: Boolean,
     dark: Boolean,
-    form: Boolean
+    form: Boolean,
+    balloon: Boolean
   },
   computed: {
     containerClasses () {
       return {
         'with-title': !!this.title,
-        'is-center': this.center,
+        'is-centered': this.center,
         'is-dark': this.dark,
-        'form': this.form
+        'form': this.form,
+        'balloon': this.balloon
       }
-    },
-    containsTitleProps () {
-      return !!this.title && !!this.titleTag
     }
   }
 }
 </script>
+
+<style lang="scss">
+@import "~typeface-press-start-2p/index.css";
+@import "~nes.css/scss/base/index";
+@import "~nes.css/scss/elements/containers";
+</style>
