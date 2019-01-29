@@ -13,7 +13,7 @@ describe('NesInputText.vue', () => {
       id: 'test-input'
     })
 
-    expect(wrapper.find('div.field>input[type="text"]#test-input.input').exists()).toBe(true)
+    expect(wrapper.find('div.nes-field>input[type="text"]#test-input.nes-input').exists()).toBe(true)
   })
 
   it('should print input with label', () => {
@@ -22,7 +22,7 @@ describe('NesInputText.vue', () => {
       label: 'the label!'
     })
 
-    expect(wrapper.find('div.field>label+input[type="text"]#test-input.input').exists()).toBe(true)
+    expect(wrapper.find('div.nes-field>label+input[type="text"]#test-input.nes-input').exists()).toBe(true)
     expect(wrapper.find('label').text()).toBe('the label!')
   })
 
@@ -33,6 +33,21 @@ describe('NesInputText.vue', () => {
     })
 
     expect(wrapper.find('input#test-input').attributes().placeholder).toEqual('this is the placeholder')
+  })
+
+  it('should emit input event on input', () => {
+    const wrapper = createInputWrapper({
+      id: 'test-input'
+    })
+
+    // Trigger Click and Emit Three Times
+    const selector = 'input.nes-input#test-input'
+    wrapper.find(selector).trigger('input')
+    wrapper.find(selector).trigger('input')
+    wrapper.find(selector).trigger('input')
+
+    expect(wrapper.emitted('input')).toBeTruthy()
+    expect(wrapper.emitted('input').length).toBe(3)
   })
 
   it('should match snapshot', () => {

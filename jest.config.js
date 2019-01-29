@@ -21,5 +21,8 @@ module.exports = {
   ],
   testURL: 'http://localhost/',
   coverageDirectory: './coverage/',
-  collectCoverage: true
+  collectCoverage: true,
+  transformIgnorePatterns: [
+    'node_modules/(?!(babel-jest|jest-vue-preprocessor)/)'
+  ]
 }

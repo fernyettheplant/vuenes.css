@@ -89,6 +89,19 @@ describe('NesButton.vue', () => {
     expect(buttonClasses).toContainEqual('is-disabled')
   })
 
+  it('should disable event emit when disabled prop is true', () => {
+    const wrapper = createButtonWrapper({
+      disabled: true
+    })
+
+    // Trigger Click and Emit Three Times
+    wrapper.find('button.nes-btn').trigger('click')
+    wrapper.find('button.nes-btn').trigger('click')
+    wrapper.find('button.nes-btn').trigger('click')
+
+    expect(wrapper.emitted('click')).toBeFalsy()
+  })
+
   it('should print html inside slot', () => {
     const wrapper = createButtonWrapper({}, '<p>Hello there!</p>')
     const slot = wrapper.find('button.nes-btn>p')

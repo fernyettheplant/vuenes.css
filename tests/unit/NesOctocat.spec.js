@@ -12,8 +12,8 @@ describe('NesOctocat.vue', () => {
     const wrapper = createOctocatWrapper()
 
     expect(wrapper.exists()).toBe(true)
-    expect(wrapper.classes()).toContainEqual('octocat')
-    expect(wrapper.find('li.octocat').exists()).toBe(true)
+    expect(wrapper.classes()).toContainEqual('nes-octocat')
+    expect(wrapper.find('li.nes-octocat').exists()).toBe(true)
   })
 
   it('should render octocat icon animated of prop animate is set up', () => {
@@ -23,7 +23,7 @@ describe('NesOctocat.vue', () => {
 
     expect(wrapper.exists()).toBe(true)
     expect(wrapper.classes()).toContainEqual('animate')
-    expect(wrapper.find('li.octocat.animate').exists()).toBe(true)
+    expect(wrapper.find('li.nes-octocat.animate').exists()).toBe(true)
   })
 
   it('should match snapshot', () => {

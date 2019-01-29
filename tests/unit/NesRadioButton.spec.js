@@ -16,7 +16,7 @@ describe('NesRadioButton.vue', () => {
       groupName: 'testgroup'
     })
 
-    const radioInput = wrapper.find('label>input[type="radio"][name="testgroup"].radio')
+    const radioInput = wrapper.find('label>input[type="radio"][name="testgroup"].nes-radio')
     expect(radioInput.exists()).toBe(true)
     expect(wrapper.find('label>span').text()).toEqual('I am a radio button!')
   })

@@ -13,7 +13,7 @@ describe('NesIcon.vue', () => {
       name: 'like'
     })
 
-    expect(wrapper.find('li.icon.like').exists()).toBe(true)
+    expect(wrapper.find('li.nes-icon.like').exists()).toBe(true)
   })
 
   it('should render icon medium', () => {
@@ -22,7 +22,7 @@ describe('NesIcon.vue', () => {
       medium: true
     })
 
-    expect(wrapper.find('li.icon.like.is-medium').exists()).toBe(true)
+    expect(wrapper.find('li.nes-icon.like.is-medium').exists()).toBe(true)
   })
 
   it('should render icon large', () => {
@@ -31,7 +31,7 @@ describe('NesIcon.vue', () => {
       large: true
     })
 
-    expect(wrapper.find('li.icon.like.is-large').exists()).toBe(true)
+    expect(wrapper.find('li.nes-icon.like.is-large').exists()).toBe(true)
   })
 
   it('should render icon empty', () => {
@@ -40,7 +40,7 @@ describe('NesIcon.vue', () => {
       empty: true
     })
 
-    expect(wrapper.find('li.icon.like.is-empty').exists()).toBe(true)
+    expect(wrapper.find('li.nes-icon.like.is-empty').exists()).toBe(true)
   })
 
   it('should match snapshot', () => {
