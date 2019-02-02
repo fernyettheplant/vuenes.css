@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NesAvatar.vue should match snapshot 1`] = `<img src="http://lorempixel.com/g/500/500" alt="this is a unit test!" class="nes-avatar is-large is-rounded">`;
