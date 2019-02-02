@@ -12,10 +12,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-@import "~typeface-press-start-2p/index.css";
-@import "~nes.css/scss/base/index";
-@import "~nes.css/scss/utilities/index";
-@import "~nes.css/scss/pixel-arts/octocat";
-</style>

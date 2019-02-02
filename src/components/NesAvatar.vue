@@ -35,8 +35,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-@import "~nes.css/scss/base/index";
-@import "~nes.css/scss/elements/avatar";
-</style>
