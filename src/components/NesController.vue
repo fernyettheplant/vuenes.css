@@ -3,6 +3,11 @@
 </template>
 
 <script>
+/**
+ * Vue Component implementation of the Nes Controller
+ * @author Jesus Fernando Alvarez Franco
+ * @license MIT
+ */
 export default {
   props: {
     type: {

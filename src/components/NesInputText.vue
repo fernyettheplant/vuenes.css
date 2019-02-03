@@ -22,6 +22,11 @@
 </template>
 
 <script>
+/**
+ * Vue Component implementation of the Nes Input Text
+ * @author Jesus Fernando Alvarez Franco
+ * @license MIT
+ */
 export default {
   props: {
     /**

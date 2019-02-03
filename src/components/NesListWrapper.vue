@@ -11,6 +11,11 @@
 </template>
 
 <script>
+/**
+ * Vue Component implementation of the Nes Lists
+ * @author Jesus Fernando Alvarez Franco
+ * @license MIT
+ */
 export default {
   props: {
     /**

@@ -8,6 +8,11 @@
 </template>
 
 <script>
+/**
+ * Vue Component implementation of the Nes Progress Bar
+ * @author Jesus Fernando Alvarez Franco
+ * @license MIT
+ */
 export default {
   props: {
     /**

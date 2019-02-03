@@ -1,5 +1,10 @@
 # nes-list-wrapper 
 
+Vue Component implementation of the Nes Lists 
+
+- **author** - Jesus Fernando Alvarez Franco 
+- **license** - MIT 
+
 ## slots 
 
 - `default` Default Slot for the Contents of the List 

@@ -18,6 +18,11 @@
 </template>
 
 <script>
+/**
+ * Vue Component implementation of the Nes TextArea
+ * @author Jesus Fernando Alvarez Franco
+ * @license MIT
+ */
 export default {
   props: {
     /**

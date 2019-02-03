@@ -1,5 +1,10 @@
 # nes-icon 
 
+Vue Component implementation of the Nes Icons 
+
+- **author** - Jesus Fernando Alvarez Franco 
+- **license** - MIT 
+
 ## props 
 
 - `name` ***String*** (*required*) 

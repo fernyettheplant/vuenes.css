@@ -1,5 +1,10 @@
 # nes-progress-bar 
 
+Vue Component implementation of the Nes Progress Bar 
+
+- **author** - Jesus Fernando Alvarez Franco 
+- **license** - MIT 
+
 ## props 
 
 - `value` ***Number*** (*optional*) `default: 0` 

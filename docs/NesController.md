@@ -1,5 +1,10 @@
 # nes-controller 
 
+Vue Component implementation of the Nes Controller 
+
+- **author** - Jesus Fernando Alvarez Franco 
+- **license** - MIT 
+
 ## props 
 
 - `type` ***String*** (*required*) 

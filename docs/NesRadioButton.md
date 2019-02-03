@@ -1,5 +1,10 @@
 # nes-radio-button 
 
+Vue Component implementation of the Nes Radio Button 
+
+- **author** - Jesus Fernando Alvarez Franco 
+- **license** - MIT 
+
 ## slots 
 
 - `default` Default contents of the Radio button 

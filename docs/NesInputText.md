@@ -1,5 +1,10 @@
 # nes-input-text 
 
+Vue Component implementation of the Nes Input Text 
+
+- **author** - Jesus Fernando Alvarez Franco 
+- **license** - MIT 
+
 ## props 
 
 - `id` ***String*** (*required*) 
