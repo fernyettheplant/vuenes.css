@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NesBalloonLeftItem.vue should match snapshot 1`] = `
+<div class="message -left">
+  <div class="nes-balloon from-left">
+    <p>This is a message from the left!</p>
+  </div>
+</div>
+`;

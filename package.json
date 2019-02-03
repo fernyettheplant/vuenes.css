@@ -1,31 +1,41 @@
 {
   "name": "vuenes.css",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Vue Library that implement NES.css library into components",
   "author": "Fernando Alvarez",
   "scripts": {
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+    "storybook:build": "vue-cli-service storybook:build -c config/storybook",
+    "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook",
+    "test:unit": "vue-cli-service test:unit",
+    "docs:generate": "vuedoc.md src/components/*.vue --output docs/",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "dependencies": {
-    "nes.css": "^0.0.2",
-    "vue": "^2.5.17"
+    "nes.css": "^1.0.0",
+    "typeface-press-start-2p": "^0.0.54",
+    "vue": "^2.5.22"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.2.0",
-    "@vue/cli-plugin-eslint": "^3.2.1",
-    "@vue/cli-plugin-unit-jest": "^3.2.0",
-    "@vue/cli-service": "^3.2.0",
+    "@storybook/addon-actions": "^4.1.0",
+    "@storybook/addon-links": "^4.1.0",
+    "@storybook/storybook-deployer": "^2.8.1",
+    "@vue/cli-plugin-babel": "^3.4.0",
+    "@vue/cli-plugin-eslint": "^3.4.0",
+    "@vue/cli-plugin-unit-jest": "^3.4.0",
+    "@vue/cli-service": "^3.4.0",
     "@vue/eslint-config-standard": "^4.0.0",
-    "@vue/test-utils": "^1.0.0-beta.20",
+    "@vue/test-utils": "^1.0.0-beta.29",
+    "@vuedoc/md": "^1.6.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
-    "babel-jest": "^23.6.0",
-    "eslint": "^5.8.0",
+    "babel-jest": "^24.0.0",
+    "eslint": "^5.13.0",
     "eslint-plugin-vue": "^5.0.0-0",
-    "husky": "^1.2.0",
+    "husky": "^1.3.1",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
+    "vue-cli-plugin-storybook": "^0.5.0",
     "vue-template-compiler": "^2.5.17"
   },
   "bugs": {
@@ -37,16 +47,6 @@
     "*.js"
   ],
   "homepage": "https://github.com/jefer590/vuenes.css#readme",
-  "husky": {
-    "hooks": {
-      "pre-commit": [
-        "npm run lint && npm run test:unit"
-      ],
-      "pre-push": [
-        "npm run lint"
-      ]
-    }
-  },
   "keywords": [
     "vue",
     "vuejs",

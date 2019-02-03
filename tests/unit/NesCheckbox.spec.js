@@ -15,7 +15,7 @@ describe('NesCheckbox.vue', () => {
     const wrapper = createCheckboxWrapper()
 
     expect(wrapper.exists()).toBe(true)
-    expect(wrapper.find('label>input[type="checkbox"].checkbox').exists()).toBe(true)
+    expect(wrapper.find('label>input[type="checkbox"].nes-checkbox').exists()).toBe(true)
     expect(wrapper.text()).toBe('I am a checkbox!')
   })
 
@@ -23,7 +23,7 @@ describe('NesCheckbox.vue', () => {
     const wrapper = createCheckboxWrapper()
 
     // Trigger Click and Emit Three Times
-    const selector = 'label>input[type="checkbox"].checkbox'
+    const selector = 'label>input[type="checkbox"].nes-checkbox'
     wrapper.find(selector).trigger('click')
     wrapper.find(selector).trigger('click')
     wrapper.find(selector).trigger('click')

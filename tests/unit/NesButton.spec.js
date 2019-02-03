@@ -24,16 +24,16 @@ describe('NesButton.vue', () => {
     const buttonClasses = wrapper.classes()
 
     expect(buttonClasses.length).toBe(1)
-    expect(buttonClasses).toContainEqual('btn')
+    expect(buttonClasses).toContainEqual('nes-btn')
   })
 
   it('should emit click event', () => {
     const wrapper = createButtonWrapper()
 
     // Trigger Click and Emit Three Times
-    wrapper.find('button.btn').trigger('click')
-    wrapper.find('button.btn').trigger('click')
-    wrapper.find('button.btn').trigger('click')
+    wrapper.find('button.nes-btn').trigger('click')
+    wrapper.find('button.nes-btn').trigger('click')
+    wrapper.find('button.nes-btn').trigger('click')
 
     expect(wrapper.emitted('click')).toBeTruthy()
     expect(wrapper.emitted('click').length).toBe(3)
@@ -79,9 +79,32 @@ describe('NesButton.vue', () => {
     expect(buttonClasses).toContainEqual('is-error')
   })
 
+  it('should add \'is-disabled\' class if disabled prop is added', () => {
+    const wrapper = createButtonWrapper({
+      disabled: true
+    })
+    const buttonClasses = wrapper.classes()
+
+    expect(buttonClasses.length).toBe(2)
+    expect(buttonClasses).toContainEqual('is-disabled')
+  })
+
+  it('should disable event emit when disabled prop is true', () => {
+    const wrapper = createButtonWrapper({
+      disabled: true
+    })
+
+    // Trigger Click and Emit Three Times
+    wrapper.find('button.nes-btn').trigger('click')
+    wrapper.find('button.nes-btn').trigger('click')
+    wrapper.find('button.nes-btn').trigger('click')
+
+    expect(wrapper.emitted('click')).toBeFalsy()
+  })
+
   it('should print html inside slot', () => {
     const wrapper = createButtonWrapper({}, '<p>Hello there!</p>')
-    const slot = wrapper.find('button>p')
+    const slot = wrapper.find('button.nes-btn>p')
 
     expect(wrapper.exists()).toBe(true)
     expect(slot.exists()).toBe(true)

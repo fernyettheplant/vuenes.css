@@ -1,50 +1,69 @@
 <template>
-  <Component
-    :is="tag"
+  <section
     :class="containerClasses"
-    class="container"
+    class="nes-container"
   >
-    <Component
-      :is="titleTag"
-      v-if="containsTitleProps"
+    <h2
+      v-if="title"
       class="title"
     >
       {{ title }}
-    </Component>
+    </h2>
+    <!-- Slot used for the Container Content -->
     <slot />
-  </Component>
+  </section>
 </template>
 
 <script>
+/**
+ * Vue Component implementation of the Nes Container
+ * @author Jesus Fernando Alvarez Franco
+ * @license MIT
+ */
 export default {
   props: {
-    tag: {
-      type: String,
-      default: () => 'div'
-    },
+    /**
+     * Defines the title of the container
+     * @default Empty String
+     */
     title: {
       type: String,
       default: () => ''
     },
-    titleTag: {
-      type: String,
-      default: () => 'h2'
-    },
+    /**
+     * Define if the container is centered. Will use the `is-centered` class
+     * @default false
+     */
     center: Boolean,
+    /**
+     * Define if the container is dark. Will use the `is-dark` class
+     * @default false
+     */
     dark: Boolean,
-    form: Boolean
+    /**
+     * Define if the container is a form. Will use the `form` class
+     * @default false
+     */
+    form: Boolean,
+    /**
+     * Define if the container is for balloons. Will use the `balloon` class
+     * @default false
+     */
+    balloon: Boolean
   },
   computed: {
+    /**
+     * Computed Property that uses the container classes depending of the props used.
+     * @returns {{'with-title': boolean, balloon: BooleanConstructor, 'is-centered': BooleanConstructor, form: BooleanConstructor, 'is-dark': BooleanConstructor}}
+     */
     containerClasses () {
       return {
         'with-title': !!this.title,
-        'is-center': this.center,
+        'is-centered': this.center,
         'is-dark': this.dark,
-        'form': this.form
+        'form': this.form,
+        'balloon': this.balloon
       }
-    },
-    containsTitleProps () {
-      return !!this.title && !!this.titleTag
     }
   }
 }
