@@ -20,22 +20,27 @@ export default {
   props: {
     /**
      * Prop that define if the Button is type Primary. Will use the `is-primary` class
+     * @default false
      */
     primary: Boolean,
     /**
      * Prop that define if the Button is type Success. Will use the `is-success` class
+     * @default false
      */
     success: Boolean,
     /**
      * Prop that define if the Button is type Warning. Will use the `is-warning` class
+     * @default false
      */
     warning: Boolean,
     /**
      * Prop that define if the Button is type Error. Will use the `is-error` class
+     * @default false
      */
     error: Boolean,
     /**
      * Prop that define if the Button is type Disabled. Will use the `is-disabled` class and will not trigger the click event
+     * @default false
      */
     disabled: Boolean
   },

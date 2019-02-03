@@ -26,7 +26,7 @@ $yarn add vuenes.css
 ```
 
 ## Quick Start
-
+### VueJS Project
 In your `main.js` you only need to import the component library and the just use it!
 
 ```js
@@ -36,241 +36,55 @@ import VueNesCss from 'vuenes.css'
 Vue.use(VueNesCss)
 ```
 
-## Components Usage
+## NuxtJS Project
 
-### NesButton
+You can import the whole library in a NuxtJS Plugin
 
-Props that can receive
+`~/plugins/vuenes.css.js`
+```js
+import Vue from 'vue'
+import VueNesCss from 'vuenes.css'
 
-- `primary`: To Add the class `is-primary` to the button
+Vue.use(VueNesCss)
+```
 
-- `success`: To Add the class `is-success` to the button
+and then import it in your `nuxt.config.js` file
+```js
+plugins: [
+  '~/plugins/vuenes.css.js'
+]
+```
 
-- `warning`: To Add the class `is-warning` to the button
-
-- `error`: To Add the class `is-error` to the button
-
-The component can contain a slot that will be the content inside the button
-
-The component emits the event `click` when clicked
-
-Example:
-
+### Individual Components
+You can also import individual components instead of the whole library in your VueJS and NuxtJS Components
 ```vue
 <template>
-  <div>
-    <nes-button
-      @click="doSomething"
-      primary
-    >
-      This is a Primary Button!
-    </nes-button>
-
-    <nes-button
-      success
-    >
-      This is a Success Button!
-    </nes-button>
-
-    <nes-button
-      warning
-    >
-      This is a Warning Button!
-    </nes-button>
-
-    <nes-button
-      error
-    >
-      This is a Error Button!
-    </nes-button>
+  <div class="container">
+    <NesInputText id="example" />
+    <NesOctocat animate />
   </div>
 </template>
+
+import { NesInputText, NesOctocat } from 'vuenes.css'
+
+export default {
+  components: {
+    NesInputText,
+    NesOctocat
+  }
+}
 ```
 
-### NesCheckbox
+## Documentation
+Go to the `docs/` library to navigate through the components documentation
 
-The component can contain a slot that will be the content inside the checkbox
-
-The component emits the event `select` when the checkbox is selected
-
-Example:
-
-```vue
-<template>
-  <div>
-    <nes-checkbox
-      @select="doSomething"
-    >
-      Do you agree with me?
-    </nes-checkbox>
-  </div>
-</template>
+## Storybook
+For visual testing, the library contains storybook which you can run by doing the next command:
+```sh
+$yarn storybook:serve
 ```
 
-### NesContainer
+## Help Wanted
+Some components are missing in this librayr such as the table one.. if you come up with a solution for a missing component, feel free to Open a PR and discuss the approach
 
-Props that can receive
-
-- `tag`: HTML Tag of the container. Default is `div`
-
-- `title`: The title of the container, also add the `with-title` class to the container
-
-- `title-tag`: The HTML Tag used for the title. Default is `h2`
-
-- `center`: add the `is-center` class
-
-- `dark`: add the `is-dark` class
-
-- `form`: add the `form` class
-
-Example:
-
-```vue
-<template>
-  <nes-container
-    tag="section"
-    title="Castlevania II"
-    dark
-  >
-    <p styles="color: white;">What a horrible night to have a curse.</p>
-  </nes-container>
-</template>
-```
-
-### NesInputText
-
-Props that can receive
-
-- `id`: Id + Name used in the Input and Label. **Required**
-
-- `label`: Label used for the input text
-
-- `placeholder`: Placeholder used for the input text
-
-- `inline`: Add `is-inline` class to the wrapper of the input text
-
-- `success`: To Add the class `is-success` to the button
-
-- `warning`: To Add the class `is-warning` to the button
-
-- `error`: To Add the class `is-error` to the button
-
-Example:
-
-```vue
-<template>
-  <nes-input-text
-    id="name"
-    label="Name"
-    placeholder="Insert Your Name Here!"
-    inline
-  />
-</template>
-```
-
-### NesRadioButton
-
-Props that can receive
-
-- `group-name`: Group Name for the Radio Buttons. **Required**
-
-The component can contain a slot that will be the content inside the radio button
-
-Example:
-
-```vue
-<template>
-  <div>
-    <nes-radio-button
-      group-name="answer"
-    >
-      Yep!
-    </nes-radio-button>
-    <nes-radio-button
-      group-name="answer"
-    >
-      Nope!
-    </nes-radio-button>
-  </div>
-</template>
-```
-
-### NesOctocat
-
-Props that can receive
-
-- `animate`: Animates the OctoCat Sprite
-
-Example:
-
-```vue
-<template>
-  <div>
-    <nes-octocat>
-    <nes-octocat animate>
-  </div>
-</template>
-```
-
-### NesIcon
-
-Props that can receive
-
-- `name`: The icon name. **Required**
-
-- `medium`: Add `is-medium` class to the icon
-
-- `large`: Add `is-large` class to the icon
-
-- `empty`: Add `is-empty` class to the icon
-
-To find the the icons, please visit: [https://bcrikko.github.io/NES.css/](https://bcrikko.github.io/NES.css/)
-
-Example:
-
-```vue
-<template>
-  <div>
-    <nes-icon
-      name="heart"
-      empty
-    />
-    <nes-icon
-      name="like"
-      medium
-    />
-    <nes-icon
-      name="youtube"
-    />
-  </div>
-</template>
-```
-
-### NesController
-
-Props that can receive
-
-- `type`: The type of controller. Only can be `nes` or `snes` and is **required**
-
-- `jp`: Gets the Japanese version of the Controller
-
-Example:
-
-```vue
-<template>
-  <div>
-    <nes-controller
-      type="snes"
-      jp
-    />
-
-    <nes-controller
-      type="nes"
-    />
-  </div>
-</template>
-```
-
-## Help is welcome!
-
-If you saw any bug or want contribute to this library, feel free to ticket an issue and/or create a PR!
+If you find any issue, please create an Issue or upload a PR

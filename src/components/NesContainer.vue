@@ -21,18 +21,41 @@
  * @license MIT
  */
 export default {
-
   props: {
+    /**
+     * Defines the title of the container
+     * @default Empty String
+     */
     title: {
       type: String,
       default: () => ''
     },
+    /**
+     * Define if the container is centered. Will use the `is-centered` class
+     * @default false
+     */
     center: Boolean,
+    /**
+     * Define if the container is dark. Will use the `is-dark` class
+     * @default false
+     */
     dark: Boolean,
+    /**
+     * Define if the container is a form. Will use the `form` class
+     * @default false
+     */
     form: Boolean,
+    /**
+     * Define if the container is for balloons. Will use the `balloon` class
+     * @default false
+     */
     balloon: Boolean
   },
   computed: {
+    /**
+     * Computed Property that uses the container classes depending of the props used.
+     * @returns {{'with-title': boolean, balloon: BooleanConstructor, 'is-centered': BooleanConstructor, form: BooleanConstructor, 'is-dark': BooleanConstructor}}
+     */
     containerClasses () {
       return {
         'with-title': !!this.title,

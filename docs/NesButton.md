@@ -11,25 +11,25 @@ Vue Component implementation of the Nes Button
 
 ## props 
 
-- `primary` ***Boolean*** (*optional*) 
+- `primary` ***Boolean*** (*optional*) `default: false` 
 
   Prop that define if the Button is type Primary. Will use the `is-primary` class 
 
-- `success` ***Boolean*** (*optional*) 
+- `success` ***Boolean*** (*optional*) `default: false` 
 
   Prop that define if the Button is type Success. Will use the `is-success` class 
 
-- `warning` ***Boolean*** (*optional*) 
+- `warning` ***Boolean*** (*optional*) `default: false` 
 
   Prop that define if the Button is type Warning. Will use the `is-warning` class 
 
-- `error` ***Boolean*** (*optional*) 
+- `error` ***Boolean*** (*optional*) `default: false` 
 
   Prop that define if the Button is type Error. Will use the `is-error` class 
 
-- `disabled` ***Boolean*** (*optional*) 
+- `disabled` ***Boolean*** (*optional*) `default: false` 
 
-  Prop that define if the Button is type Disabled. Will use the `is-disabled` class 
+  Prop that define if the Button is type Disabled. Will use the `is-disabled` class and will not trigger the click event 
 
 ## computed properties 
 
@@ -43,8 +43,6 @@ Vue Component implementation of the Nes Button
 ## events 
 
 - `click` 
-
-  Fired when a the user clicks the button. 
 
 ## methods 
 

@@ -7,6 +7,10 @@
 
 <script>
 export default {
+  /**
+   * Define if the Octocat is animated
+   * @default false
+   */
   props: {
     animate: Boolean
   }

@@ -1,31 +1,42 @@
 # nes-container 
 
+Vue Component implementation of the Nes Container 
+
+- **author** - Jesus Fernando Alvarez Franco 
+- **license** - MIT 
+
 ## slots 
 
-- `default` 
+- `default` Slot used for the Container Content 
 
 ## props 
 
-- `tag` ***String*** (*optional*) `default: [object Object]` 
+- `title` ***String*** (*optional*) `default: Empty String` 
 
-- `title` ***String*** (*optional*) `default: [object Object]` 
+  Defines the title of the container 
 
-- `title-tag` ***String*** (*optional*) `default: [object Object]` 
+- `center` ***Boolean*** (*optional*) `default: false` 
 
-- `center` ***Boolean*** (*optional*) 
+  Define if the container is centered. Will use the `is-centered` class 
 
-- `dark` ***Boolean*** (*optional*) 
+- `dark` ***Boolean*** (*optional*) `default: false` 
 
-- `form` ***Boolean*** (*optional*) 
+  Define if the container is dark. Will use the `is-dark` class 
+
+- `form` ***Boolean*** (*optional*) `default: false` 
+
+  Define if the container is a form. Will use the `form` class 
+
+- `balloon` ***Boolean*** (*optional*) `default: false` 
+
+  Define if the container is for balloons. Will use the `balloon` class 
 
 ## computed properties 
 
 - `containerClasses` 
 
-   **dependencies:** `title`, `center`, `dark`, `form` 
+  Computed Property that uses the container classes depending of the props used. 
 
-- `containsTitleProps` 
-
-   **dependencies:** `title`, `titleTag` 
+   **dependencies:** `title`, `center`, `dark`, `form`, `balloon` 
 
 
