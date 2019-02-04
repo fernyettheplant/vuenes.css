@@ -85,6 +85,6 @@ $yarn storybook:serve
 ```
 
 ## Help Wanted
-Some components are missing in this librayr such as the table one.. if you come up with a solution for a missing component, feel free to Open a PR and discuss the approach
+Some components are missing in this library such as the table one.. if you come up with a solution for a missing component, feel free to Open a PR and discuss the approach
 
 If you find any issue, please create an Issue or upload a PR
