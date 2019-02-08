@@ -1,8 +1,19 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { storiesOf } from '@storybook/vue'
 import NesProgressBar from '../src/components/NesProgressBar.vue'
+import { withBackgrounds } from '@storybook/addon-backgrounds'
 
 const progressBarStory = storiesOf('NesProgressBar', module)
+  .addDecorator(withBackgrounds([
+    { name: 'Blue', value: 'blue' },
+    { name: 'Green', value: 'green' },
+    { name: 'Yellow', value: 'yellow' },
+    { name: 'Orange', value: 'orange' },
+    { name: 'Red', value: 'red' },
+    { name: 'Purple', value: 'purple' },
+    { name: 'Black', value: 'black' },
+    { name: 'White', value: 'white', default: true }
+  ]))
 
 progressBarStory.add('Normal', () => ({
   components: { NesProgressBar },
