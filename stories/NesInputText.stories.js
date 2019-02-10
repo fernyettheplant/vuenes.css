@@ -2,8 +2,19 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 import NesInputText from '../src/components/NesInputText.vue'
+import { withBackgrounds } from '@storybook/addon-backgrounds'
 
 const inputStory = storiesOf('NesInputText', module)
+  .addDecorator(withBackgrounds([
+    { name: 'Blue', value: 'blue' },
+    { name: 'Green', value: 'green' },
+    { name: 'Yellow', value: 'yellow' },
+    { name: 'Orange', value: 'orange' },
+    { name: 'Red', value: 'red' },
+    { name: 'Purple', value: 'purple' },
+    { name: 'Black', value: 'black' },
+    { name: 'White', value: 'white', default: true }
+  ]))
 
 inputStory.add('Common', () => ({
   components: { NesInputText },

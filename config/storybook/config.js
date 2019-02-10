@@ -1,5 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import { configure } from '@storybook/vue'
+import {
+  addDecorator,
+  configure,
+} from '@storybook/vue'
 
 // Import CSS
 import('nes.css/css/nes.css')

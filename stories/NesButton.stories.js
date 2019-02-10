@@ -2,8 +2,19 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 import NesButton from '../src/components/NesButton.vue'
+import { withBackgrounds } from '@storybook/addon-backgrounds'
 
 const buttonStory = storiesOf('NesButton', module)
+  .addDecorator(withBackgrounds([
+    { name: 'Blue', value: 'blue' },
+    { name: 'Green', value: 'green' },
+    { name: 'Yellow', value: 'yellow' },
+    { name: 'Orange', value: 'orange' },
+    { name: 'Red', value: 'red' },
+    { name: 'Purple', value: 'purple' },
+    { name: 'Black', value: 'black' },
+    { name: 'White', value: 'white', default: true }
+  ]))
 
 buttonStory.add('Normal', () => ({
   components: { NesButton },
