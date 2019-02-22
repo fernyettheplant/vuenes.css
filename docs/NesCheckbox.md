@@ -15,6 +15,19 @@ Vue Component implementation of the Nes Checkbox
 
   Define if the checkbox is checked on init 
 
+- `dark` ***Boolean*** (*optional*) `default: false` 
+
+  Define if the checkbox is dark. Will use the `is-dark` class 
+
+## computed properties 
+
+- `checkboxClasses` 
+
+  Computed Property that uses the checkbox classes depending of the props used. 
+
+   **dependencies:** `dark` 
+
+
 ## events 
 
 - `select` 
