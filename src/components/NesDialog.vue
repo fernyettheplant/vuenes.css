@@ -44,13 +44,8 @@ export default {
         'is-dark': this.dark
       }
     },
-    openCloseToggle: {
-      get () {
-        return this.open
-      },
-      set (value) {
-        this.$emit('update:open', value)
-      }
+    openCloseToggle () {
+      return this.open
     }
   }
 }

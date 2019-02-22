@@ -16,9 +16,7 @@ const dialogStory = storiesOf('NesDialog', module)
     { name: 'White', value: 'white', default: true }
   ]))
 
-const toggleBtn = `<NesButton @click="toggle"
-    style="margin-top:-300px">
-    Toggle dialog</NesButton>`
+const toggleBtn = `<NesButton @click="toggle" style="margin-top:-300px">Toggle dialog</NesButton>`
 
 const form = `<form method="dialog">
   <p class="title">Dialog</p>
