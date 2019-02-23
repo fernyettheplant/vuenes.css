@@ -25,6 +25,16 @@ containerStory.add('Dark', () => ({
   template: '<NesContainer dark><p>WHAT A HORRIBLE NIGHT TO HAVE A CURSE.</p></NesContainer>'
 }))
 
+containerStory.add('Rounded', () => ({
+  components: { NesContainer },
+  template: '<NesContainer rounded><p>I am error.</p></NesContainer>'
+}))
+
+containerStory.add('Dark And Rounded', () => ({
+  components: { NesContainer },
+  template: '<NesContainer dark rounded><p>WHAT A HORRIBLE NIGHT TO HAVE A CURSE.</p></NesContainer>'
+}))
+
 containerStory.add('With Title', () => ({
   components: { NesContainer },
   template: `<NesContainer title="Zelda II"><p>I am error.</p></NesContainer>`
@@ -43,4 +53,14 @@ containerStory.add('Centered With Title', () => ({
 containerStory.add('Centered Dark With Title', () => ({
   components: { NesContainer },
   template: `<NesContainer title="Castlevania II: Simon's Quest" dark center><p>WHAT A HORRIBLE NIGHT TO HAVE A CURSE.</p></NesContainer>`
+}))
+
+containerStory.add('Rounded And Dark With Title', () => ({
+  components: { NesContainer },
+  template: `<NesContainer title="Castlevania II: Simon's Quest" dark rounded><p>WHAT A HORRIBLE NIGHT TO HAVE A CURSE.</p></NesContainer>`
+}))
+
+containerStory.add('Centered And Rounded And Dark With Title', () => ({
+  components: { NesContainer },
+  template: `<NesContainer title="Castlevania II: Simon's Quest" dark rounded center><p>WHAT A HORRIBLE NIGHT TO HAVE A CURSE.</p></NesContainer>`
 }))

@@ -49,18 +49,24 @@ export default {
      * Define if the container is for balloons. Will use the `balloon` class
      * @default false
      */
-    balloon: Boolean
+    balloon: Boolean,
+    /**
+     * Define if the container has rounded corners. Will use the `is-rounded` class
+     * @default false
+     */
+    rounded: Boolean
   },
   computed: {
     /**
      * Computed Property that uses the container classes depending of the props used.
-     * @returns {{'with-title': boolean, balloon: BooleanConstructor, 'is-centered': BooleanConstructor, form: BooleanConstructor, 'is-dark': BooleanConstructor}}
+     * @returns {{'with-title': boolean, balloon: BooleanConstructor, 'is-centered': BooleanConstructor, form: BooleanConstructor, 'is-dark': BooleanConstructor, 'is-rounded': BooleanConstructor}}
      */
     containerClasses () {
       return {
         'with-title': !!this.title,
         'is-centered': this.center,
         'is-dark': this.dark,
+        'is-rounded': this.rounded,
         'form': this.form,
         'balloon': this.balloon
       }

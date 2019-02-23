@@ -31,12 +31,16 @@ Vue Component implementation of the Nes Container
 
   Define if the container is for balloons. Will use the `balloon` class 
 
+- `rounded` ***Boolean*** (*optional*) `default: false` 
+
+  Define if the container has rounded corners. Will use the `is-rounded` class 
+
 ## computed properties 
 
 - `containerClasses` 
 
   Computed Property that uses the container classes depending of the props used. 
 
-   **dependencies:** `title`, `center`, `dark`, `form`, `balloon` 
+   **dependencies:** `title`, `center`, `dark`, `rounded`, `form`, `balloon` 
 
 
