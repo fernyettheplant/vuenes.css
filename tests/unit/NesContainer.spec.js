@@ -43,30 +43,6 @@ describe('NesContainer.vue', () => {
     expect(darkContainer.exists()).toBe(true)
   })
 
-  it('should set "is-rounded" class if the rounded prop is set', () => {
-    const wrapper = createContainerWrapper({
-      rounded: true
-    })
-
-    const roundedContainer = wrapper.find('section.nes-container.is-rounded')
-
-    expect(wrapper.classes()).toContainEqual('is-rounded')
-    expect(roundedContainer.exists()).toBe(true)
-  })
-
-  it('should set "is-rounded" and "is-dark" classes if the props rounded and dark is set', () => {
-    const wrapper = createContainerWrapper({
-      rounded: true,
-      dark: true
-    })
-
-    const darkAndRoundedContainer = wrapper.find('section.nes-container.is-rounded.is-dark')
-
-    expect(wrapper.classes()).toContainEqual('is-rounded')
-    expect(wrapper.classes()).toContainEqual('is-dark')
-    expect(darkAndRoundedContainer.exists()).toBe(true)
-  })
-
   it('should set "is-form" class if the form prop is set', () => {
     const wrapper = createContainerWrapper({
       form: true
