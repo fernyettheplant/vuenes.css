@@ -17,11 +17,22 @@ const radiosStory = storiesOf('NesCheckbox', module)
     { name: 'White', value: 'white', default: true }
   ]))
 
-radiosStory.add('Checkboxes', () => ({
+radiosStory.add('Normal', () => ({
   components: { NesContainer, NesCheckbox },
   template:
-    '<NesContainer title="Radios">' +
+    '<NesContainer title="Checkboxes">' +
     '<NesCheckbox @select="select" checked>Enable</NesCheckbox>' +
+    '</NesContainer>',
+  methods: {
+    select: action('Select Emitted!')
+  }
+}))
+
+radiosStory.add('Dark', () => ({
+  components: { NesContainer, NesCheckbox },
+  template:
+    '<NesContainer title="Checkboxes">' +
+    '<NesCheckbox dark @select="select" checked>Enable</NesCheckbox>' +
     '</NesContainer>',
   methods: {
     select: action('Select Emitted!')

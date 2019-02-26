@@ -41,6 +41,17 @@ describe('NesCheckbox.vue', () => {
     expect(slot.html()).toBe('<span><h2>Hello there!</h2></span>')
   })
 
+  it('should set "is-dark" class if the dark prop is set', () => {
+    const wrapper = createCheckboxWrapper({
+      dark: true
+    })
+    const selector = 'label>input[type="checkbox"].nes-checkbox'
+    const darkCheckbox = wrapper.find(selector)
+
+    expect(darkCheckbox.exists()).toBe(true)
+    expect(darkCheckbox.classes()).toContainEqual('is-dark')
+  })
+
   it('should match snapshot', () => {
     const wrapper = createCheckboxWrapper({}, '<h2>Hello there!</h2>')
 
