@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "nes.css": "^2.0.0",
-    "typeface-press-start-2p": "^0.0.54",
+    "typeface-press-start-2p": "^0.0.72",
     "vue": "^2.5.22"
   },
   "devDependencies": {
