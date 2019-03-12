@@ -1,6 +1,6 @@
 {
   "name": "vuenes.css",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Vue Library that implement NES.css library into components",
   "author": "Fernando Alvarez",
   "scripts": {
