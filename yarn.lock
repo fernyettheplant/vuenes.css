@@ -12747,10 +12747,10 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
-vue-cli-plugin-storybook@^0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/vue-cli-plugin-storybook/-/vue-cli-plugin-storybook-0.6.0.tgz#3e10d5214ad46d939298a21e553528f9850a695e"
-  integrity sha512-Qrtw5Zb/goVTS3IoTyX51/14cHy/YC3a6M1P7RVMqgTQGxfWxGVQ4EBSR0JmF0CkSYoJKlfxhQoJ3PT2DpHpJQ==
+vue-cli-plugin-storybook@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/vue-cli-plugin-storybook/-/vue-cli-plugin-storybook-0.6.1.tgz#9bb8a284464b14bf92372cc48e00d980f8adc536"
+  integrity sha512-3SX8jBK9yykPzKzXbWJuhRmcE2vC9sPW8fkqPQLqNQgm0FDs3ctRJyvm7NrOo+EsGH+qlsH0niiSaN0ICuyVWg==
   dependencies:
     "@storybook/addons" "^4.1.0 || ^5.0.0"
     "@storybook/vue" "^4.1.0 || ^5.0.0"
