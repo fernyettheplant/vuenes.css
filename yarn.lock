@@ -1425,10 +1425,10 @@
     eslint "^4.19.1"
     eslint-plugin-vue "^4.7.1"
 
-"@vue/cli-plugin-unit-jest@^3.5.1":
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-unit-jest/-/cli-plugin-unit-jest-3.5.1.tgz#bcd90bac895f44150bb736a0e9a0fef25c51b9fe"
-  integrity sha512-VFnkM3R/Z91IWLZyKh6CLgsWaRJfhWUThkAR13q7ama8WyIFPpKAyJKM0jdsm1Gx2PnBwCm/mrjUpzK4VB0ssA==
+"@vue/cli-plugin-unit-jest@^3.5.2":
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-unit-jest/-/cli-plugin-unit-jest-3.5.2.tgz#8ba1f0efc3c12bd177b5a60e2f277720179a61ed"
+  integrity sha512-vUmEvKN0I1k7LsiQhbRsSjs7E+n99WDOOeAC4OLBLSWUKRYDcpk6LLiKuLMXCp8J7lt1KX15F8n94Gq0W9584g==
   dependencies:
     "@vue/cli-shared-utils" "^3.5.1"
     babel-jest "^23.6.0"
