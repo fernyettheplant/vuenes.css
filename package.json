@@ -19,7 +19,7 @@
   "devDependencies": {
     "@storybook/addon-actions": "^5.1.4",
     "@storybook/addon-backgrounds": "^5.1.4",
-    "@storybook/addon-links": "^5.0.1",
+    "@storybook/addon-links": "^5.1.4",
     "@storybook/storybook-deployer": "^2.8.1",
     "@vue/cli-plugin-babel": "^3.5.1",
     "@vue/cli-plugin-eslint": "^3.5.1",
