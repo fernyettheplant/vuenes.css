@@ -22,7 +22,7 @@
     "@storybook/addon-links": "^5.0.1",
     "@storybook/storybook-deployer": "^2.8.1",
     "@vue/cli-plugin-babel": "^3.5.1",
-    "@vue/cli-plugin-eslint": "^3.5.1",
+    "@vue/cli-plugin-eslint": "^3.9.1",
     "@vue/cli-plugin-unit-jest": "^3.5.1",
     "@vue/cli-service": "^3.5.1",
     "@vue/eslint-config-standard": "^4.0.0",
