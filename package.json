@@ -12,7 +12,7 @@
     "deploy-storybook": "storybook-to-ghpages"
   },
   "dependencies": {
-    "nes.css": "^2.1.0",
+    "nes.css": "^2.2.1",
     "typeface-press-start-2p": "^0.0.72",
     "vue": "^2.6.8"
   },
